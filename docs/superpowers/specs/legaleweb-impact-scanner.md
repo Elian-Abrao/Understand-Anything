@@ -9,6 +9,25 @@ code, EF models, raw SQL, and database objects with explicit evidence.
 
 ## Run
 
+For a complete deterministic scan without the interactive agent pipeline:
+
+```bash
+pnpm legaleweb:scan \
+  --project-root /path/to/legaleweb \
+  --out-dir /path/to/legaleweb/.understand-anything
+```
+
+With SQL Server metadata:
+
+```bash
+pnpm legaleweb:scan \
+  --project-root /path/to/legaleweb \
+  --out-dir /path/to/legaleweb/.understand-anything \
+  --db-metadata /path/to/sqlserver-metadata.json
+```
+
+To enrich an existing Understand-Anything graph:
+
 ```bash
 pnpm legaleweb:impact \
   --project-root /path/to/legaleweb \

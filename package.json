@@ -10,6 +10,7 @@
     "test": "vitest run",
     "dev:dashboard": "pnpm --filter @understand-anything/dashboard dev",
     "legaleweb:impact": "node understand-anything-plugin/scripts/enrich-legaleweb-impact.mjs",
+    "legaleweb:scan": "node understand-anything-plugin/scripts/scan-legaleweb.mjs",
     "lint": "eslint ."
   },
   "devDependencies": {
