@@ -9,6 +9,7 @@
     "build": "pnpm -r build",
     "test": "vitest run",
     "dev:dashboard": "pnpm --filter @understand-anything/dashboard dev",
+    "legaleweb:impact": "node understand-anything-plugin/scripts/enrich-legaleweb-impact.mjs",
     "lint": "eslint ."
   },
   "devDependencies": {
