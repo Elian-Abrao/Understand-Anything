@@ -42,6 +42,10 @@ sqlcmd -S "<server>" -d "<database>" -E \
   -i understand-anything-plugin/scripts/sqlserver-legaleweb-metadata.sql \
   -o sqlserver-metadata.json -h -1 -W
 
+node understand-anything-plugin/scripts/normalize-sqlcmd-json.mjs \
+  sqlserver-metadata.raw.json \
+  sqlserver-metadata.json
+
 pnpm legaleweb:impact \
   --project-root /path/to/legaleweb \
   --graph /path/to/legaleweb/.understand-anything/knowledge-graph.json \
